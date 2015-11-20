@@ -13,7 +13,9 @@ RUN    dnf -y update \
            nmap-ncat \
     && dnf -y clean all
 
+EXPOSE 4822
+
 USER 1000
 
-CMD /bin/bash
+CMD /bin/nc -l 4822
 
